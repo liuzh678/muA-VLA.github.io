@@ -380,6 +380,21 @@ a:hover {
   margin-top: 0;
 }
 
+.video-frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0f1915;
+  box-shadow: 0 24px 60px rgba(23, 32, 28, 0.14);
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1054 / 720;
+  background: #0f1915;
+}
+
 .bibtex-block {
   position: relative;
   border: 1px solid var(--line);
