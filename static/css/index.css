@@ -83,6 +83,8 @@ main { max-width: 1200px; margin: auto; padding: 0 22px; }
 .paper-figure { margin: 0; padding: 22px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
 .paper-figure img { display: block; width: 100%; height: auto; }
 .paper-figure figcaption { margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.figure-original { display: inline-block; margin-top: 9px; font-size: 12px; font-weight: 500; }
+.paper-figure > a:focus-visible { outline-offset: -3px; }
 .pipeline-grid { margin-top: 16px; gap: 14px; }
 .pipeline-grid article { padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
 .metric-strip { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin-bottom: 22px; }
