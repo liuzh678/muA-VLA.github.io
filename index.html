@@ -6,7 +6,7 @@
   <title>&micro;A-VLA: A Multi-Agent Online Self-Healing Framework for Long-Horizon Robotic Manipulation</title>
   <meta name="description" content="&micro;A-VLA is a multi-agent online self-healing framework that converts visual failure reasoning into executable interventions for long-horizon robotic manipulation.">
   <meta name="keywords" content="&micro;A-VLA, VLA, robot manipulation, long-horizon manipulation, online recovery, multi-agent systems, IROS">
-  <meta name="theme-color" content="#f7f3ea">
+  <meta name="theme-color" content="#f7f8fb">
 
   <meta property="og:title" content="&micro;A-VLA">
   <meta property="og:type" content="website">
@@ -22,46 +22,52 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/index.css">
   <script defer src="./static/js/fontawesome.all.min.js"></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#abstract">Skip to content</a>
   <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
     <a class="brand" href="#top">&micro;A-VLA</a>
-    <div class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="section-navigation" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="section-navigation">
+      <a href="#video">Video</a>
       <a href="#abstract">Abstract</a>
       <a href="#method">Method</a>
       <a href="#results">Results</a>
-      <a href="#video">Video</a>
-      <a href="#real-world">Real World</a>
-      <a href="#citation">Citation</a>
+      <a href="#real-world">Real Robot</a>
+      <a href="#citation">BibTeX</a>
+    </div>
+    <div class="nav-actions">
+      <a class="nav-paper" href="#citation">Paper</a>
+      <span class="nav-code" aria-disabled="true" title="Code coming soon">Code · Soon</span>
+    </div>
     </div>
   </nav>
 
   <header class="paper-hero" id="top">
-    <div class="hero-backdrop" aria-hidden="true"></div>
     <div class="hero-content">
-      <p class="venue-label">IROS 2026 Project Page</p>
-      <h1>&micro;A-VLA: A Multi-Agent Online Self-Healing Framework for Long&#8209;Horizon Robotic Manipulation</h1>
+      <h1><span class="title-accent">&micro;A-VLA:</span> A Multi-Agent Online Self-Healing Framework for Long-Horizon Robotic Manipulation</h1>
       <p class="hero-subtitle">
         A closed-loop reasoning, coding, and intervention framework that helps VLA policies recover from cascading failures during long-horizon manipulation.
       </p>
 
       <div class="author-line">
-        <span>Ziheng Liu<sup>1</sup></span>
+        <span><strong>Ziheng Liu</strong><sup>1</sup></span>
         <span>You Wang<sup>2</sup></span>
         <span>Cong Wang<sup>3</sup></span>
         <span>Jun Fu<sup>1,*</sup></span>
       </div>
 
-      <p class="affiliation-line">
-        <sup>1</sup>Zhejiang Gongshang University &middot; <sup>2</sup>Luoteng Technology (Hangzhou) Co., Ltd. &amp; Zhejiang University &middot; <sup>3</sup>Harvard University
-      </p>
+      <div class="affiliation-line">
+        <span><sup>1</sup>Zhejiang Gongshang University</span>
+        <span><sup>2</sup>Luoteng Technology (Hangzhou) Co., Ltd. &amp; Zhejiang University</span>
+        <span><sup>3</sup>Harvard University</span>
+      </div>
+      <p class="venue-label">IROS 2026</p>
 
       <div class="hero-actions" aria-label="Project links">
         <a class="action-button primary" href="#citation">
@@ -83,15 +89,19 @@
   <main>
     <section class="section-band video-band" id="video">
       <div class="section-inner">
-        <div class="section-heading centered">
-          <p class="eyebrow">Video</p>
-          <h2>Demonstration video</h2>
-        </div>
+        <h2 class="sr-only">Demonstration video</h2>
 
         <div class="video-frame">
-          <video controls preload="metadata" poster="./static/images/video-poster.jpg">
+          <video controls playsinline preload="metadata" aria-label="Long-horizon robot manipulation demonstration" poster="./static/images/video-poster.jpg">
             <source src="./static/videos/iros-demo-720p.mp4" type="video/mp4">
           </video>
+        </div>
+        <p class="video-caption">Long-horizon manipulation with online failure diagnosis and recovery.</p>
+        <div class="hero-metrics" aria-label="Key results on CALVIN ABC to D">
+          <div><strong>90.1%</strong><span>Five-step success · CALVIN</span></div>
+          <div><strong>4.76</strong><span>Average sequence length</span></div>
+          <div><strong>+28.9 pp</strong><span>Five-step success vs. π<sub>0.5</sub></span></div>
+          <div><strong>+0.91</strong><span>Average length vs. π<sub>0.5</sub></span></div>
         </div>
       </div>
     </section>
@@ -129,8 +139,8 @@
     <section class="section-band" id="abstract">
       <div class="section-inner narrow">
         <div class="section-heading centered">
-          <p class="eyebrow">Abstract</p>
-          <h2>From brittle chained execution to recoverable long-horizon behavior</h2>
+          <h2>Abstract</h2>
+          <p>From brittle chained execution to recoverable long-horizon behavior.</p>
         </div>
         <div class="abstract-copy">
           <p>
@@ -208,23 +218,27 @@
           </div>
         </div>
 
-        <div class="results-layout">
-          <figure class="paper-figure">
+        <div class="result-tabs" role="tablist" aria-label="CALVIN results" hidden>
+          <button id="tab-benchmark" type="button" role="tab" aria-selected="true" aria-controls="panel-benchmark" data-result-tab="panel-benchmark">Benchmark comparison</button>
+          <button id="tab-subtasks" type="button" role="tab" aria-selected="false" aria-controls="panel-subtasks" tabindex="-1" data-result-tab="panel-subtasks">Subtask performance</button>
+          <button id="tab-agents" type="button" role="tab" aria-selected="false" aria-controls="panel-agents" tabindex="-1" data-result-tab="panel-agents">Agent configurations</button>
+        </div>
+        <div class="result-panels">
+          <figure class="paper-figure" id="panel-benchmark" role="tabpanel" aria-labelledby="tab-benchmark">
             <img src="./static/images/sota.jpg" alt="Main CALVIN ABC to D benchmark results for muA-VLA.">
             <figcaption>&micro;A-VLA reaches an Avg. Len. of 4.76 and a 90.1% 5-step success rate.</figcaption>
           </figure>
-          <figure class="paper-figure">
+          <figure class="paper-figure" id="panel-subtasks" role="tabpanel" aria-labelledby="tab-subtasks">
             <img src="./static/images/before_after_barh.png" alt="Representative subtask performance comparison between pi 0.5 and muA-VLA.">
             <figcaption>Subtask-level gains show how online interventions reduce failure accumulation.</figcaption>
           </figure>
-        </div>
-
-        <figure class="paper-figure wide compact">
+        <figure class="paper-figure" id="panel-agents" role="tabpanel" aria-labelledby="tab-agents">
           <img src="./static/images/agent configuration.jpg" alt="Agent configuration study across different LLM and VLM choices.">
           <figcaption>
             The framework remains strong across core model configurations; even the weakest setting surpasses the prior CALVIN ABC&rarr;D state of the art.
           </figcaption>
         </figure>
+        </div>
       </div>
     </section>
 
@@ -295,20 +309,6 @@
     </p>
   </footer>
 
-  <script>
-    const copyButton = document.querySelector("[data-copy-target]");
-    if (copyButton) {
-      copyButton.addEventListener("click", async () => {
-        const target = document.getElementById(copyButton.dataset.copyTarget);
-        const status = document.querySelector(".copy-status");
-        try {
-          await navigator.clipboard.writeText(target.innerText);
-          status.textContent = "BibTeX copied.";
-        } catch (error) {
-          status.textContent = "Copy failed. Please select the BibTeX manually.";
-        }
-      });
-    }
-  </script>
+  <script src="./static/js/project-page.js" defer></script>
 </body>
 </html>
